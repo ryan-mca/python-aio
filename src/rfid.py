@@ -19,4 +19,6 @@ def read(detailed=False):
         except OSError:
             print("(-) Make sure your RFID device is connected properly")
             sleep_ms(1000)
-        
+
+def write():
+    return 1
