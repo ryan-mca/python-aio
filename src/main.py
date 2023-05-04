@@ -1,4 +1,5 @@
 import argparse
+import ir
 import rfid
    
 def main():
@@ -13,7 +14,11 @@ def main():
         "-d", "--detailed",
         help="More detailed output on RFID",
         action="store_true")
+    
+    parser.add_argument("-p", "--pin")
     args = parser.parse_args()
+
+    ir.read(args.pin)
 
     if args.detailed:
         rfid.read(True)
