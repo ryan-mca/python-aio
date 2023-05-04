@@ -7,8 +7,8 @@ def read(pin):
 
     while True:
         data = decode(receive(int(pin)))
+        print(data)
         if data:
             name = input("Name for received data: ")
             break
     keys[name] = data
-    print(keys)
