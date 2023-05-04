@@ -1,7 +1,7 @@
 from PiicoDev_RFID import PiicoDev_RFID
 from PiicoDev_Unified import sleep_ms
 
-def read():
+def read(detailed=False):
     print("(i) Setting up RFID")
     rfid = PiicoDev_RFID()
 
@@ -9,7 +9,7 @@ def read():
 
     while True:
         if rfid.tagPresent():
-            id = rfid.readID()
+            id = rfid.readID(detail=detailed)
 
             print(id)
     
