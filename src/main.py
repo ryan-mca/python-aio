@@ -9,7 +9,10 @@ def main():
         epilog="License: GPLv3"
     )
     
-    parser.add_argument("-d", "--detailed", help="More detailed output on RFID")
+    parser.add_argument(
+        "-d", "--detailed",
+        help="More detailed output on RFID",
+        action="store_true")
     args = parser.parse_args()
 
     if args.detailed:
