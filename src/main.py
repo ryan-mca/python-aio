@@ -1,5 +1,7 @@
+import rfid
+   
 def main():
-    return
+    rfid.read()
 
 if __name__ == "__main__":
     try:
