@@ -6,7 +6,7 @@ def read(pin):
     keys = {}
 
     while True:
-        data = decode(receive(pin))
+        data = decode(receive(int(pin)))
         if data:
             name = input("Name for received data: ")
             break
